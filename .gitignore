@@ -1,0 +1,38 @@
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE/workspace
+.vscode/
+.cursor/
+.idea/
+.fleet/
+.obsidian/
+
+# Builds/binaries
+*.log
+*.tmp
+*.bak
+*.old
+*.orig
+*.rej
+*.swp
+*.swo
+*.lock
+*.cache
+
+# Node/npm artifacts (some addons use tooling)
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+dist/
+build/
+
+# WoW addon packaging
+*.zip
+*.rar
+*.7z
+Release/
+Releases/
+
