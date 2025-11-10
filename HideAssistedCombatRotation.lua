@@ -153,15 +153,35 @@ for _, event in ipairs(EVENTS) do
   driver:RegisterEvent(event)
 end
 
-driver:SetScript("OnEvent", function()
-  local attempts, maxAttempts = 0, 30  -- ~15 seconds of retries
-  local function tick()
+local tickInProgress = false
+local pendingTicker = nil
+
+local function startRetryLoop()
+  if tickInProgress then return end
+  tickInProgress = true
+
+  local attempts, maxAttempts = 0, 30
+  pendingTicker = C_Timer.NewTicker(0.5, function(ticker)
     attempts = attempts + 1
     local got = findAndNeutralize()
-    if got or attempts >= maxAttempts then return end
-    C_Timer.After(0.5, tick)
+    if got or attempts >= maxAttempts then
+      if ticker then
+        ticker:Cancel()
+      end
+      pendingTicker = nil
+      tickInProgress = false
+    end
+  end)
+end
+
+driver:SetScript("OnEvent", function()
+  if pendingTicker == nil and tickInProgress then
+    -- Safety: reset if ticker cleared unexpectedly.
+    tickInProgress = false
   end
-  tick()
+  if pendingTicker == nil then
+    startRetryLoop()
+  end
 end)
 
 -- Also periodically reapply in long sessions in case the UI rebuilds.
