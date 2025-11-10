@@ -1,0 +1,9 @@
+## Interface: 110000
+## Title: Hide Assisted Combat Rotation
+## Notes: Sets Blizzard's AssistedCombatRotationFrame invisible and non-interactive.
+## Author: ChatGPT for Evan
+## Version: 1.0.0
+## X-Category: Utility
+## DefaultState: enabled
+
+HideAssistedCombatRotation.lua
