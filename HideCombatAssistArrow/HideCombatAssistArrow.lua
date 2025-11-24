@@ -1,4 +1,4 @@
--- HideAssistedCombatRotation
+-- HideCombatAssistArrow
 -- Makes Blizzard's AssistedCombatRotationFrame effectively invisible & non-interactive.
 -- Safe in and out of combat (alpha/mouse changes are not restricted).
 

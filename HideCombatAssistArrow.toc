@@ -1,0 +1,10 @@
+## Interface: 120000, 110207, 110205
+## Title: Hide Combat Assist Arrow
+## Notes: Removes the 'arrow' frame from the Single Button Assistant
+## Author: Raxas
+## Version: 1.0.0
+## Category: Action Bars
+## IconTexture: interface/icons/ui_spellbook_onebutton
+## DefaultState: enabled
+
+HideCombatAssistArrow.lua
