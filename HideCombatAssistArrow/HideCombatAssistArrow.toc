@@ -1,4 +1,4 @@
-## Interface: 110207, 110205
+## Interface: 120001, 120000, 110207
 ## Title: Hide Combat Assist Arrow
 ## Notes: Removes the 'arrow' frame from the Single Button Assistant
 ## Author: Raxas

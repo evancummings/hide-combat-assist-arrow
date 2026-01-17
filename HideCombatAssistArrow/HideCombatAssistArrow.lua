@@ -16,7 +16,9 @@ local ASSIST_CHILD_NAME_SEGMENTS = {
 local ACTION_BUTTON_FAMILIES = {
   { prefix = "ActionButton", count = 12 },
   { prefix = "MultiBarBottomLeftButton", count = 12 },
+  { prefix = "MultiBarBottomLeftActionButton", count = 12 },
   { prefix = "MultiBarBottomRightButton", count = 12 },
+  { prefix = "MultiBarBottomRightActionButton", count = 12 },
   { prefix = "MultiBarRightButton", count = 12 },
   { prefix = "MultiBarLeftButton", count = 12 },
   { prefix = "MultiBar5Button", count = 12 },
